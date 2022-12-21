@@ -8,10 +8,16 @@ import AddressForm from '../components/AddressForm'
 const Home: NextPage = () => {
   const [balance, setBalance] = useState(0)
   const [address, setAddress] = useState('')
+  const [isExecutable, setIsExecutable] = useState(false)
 
   const addressSubmittedHandler = (address: string) => {
-    setAddress(address)
-    setBalance(1000)
+    try{
+      setAddress(address)
+      setBalance(1000)
+    }catch{
+      
+    }
+    
   }
 
   return (
